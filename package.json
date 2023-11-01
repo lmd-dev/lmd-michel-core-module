@@ -1,0 +1,22 @@
+{
+  "name": "lmd-michel-module-core",
+  "version": "1.0.0",
+  "description": "Base code for LMD Michel module core",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack",
+    "copyManifest": "copyfiles manifest.json dist || exit 0",
+    "zip": "cd dist && bestzip ../build/module.zip *",
+    "createBuildFolder": "mkdir build || exit 0",
+    "deploy": "npm run build && npm run copyManifest && npm run createBuildFolder && npm run zip"
+  },
+  "author": "Les Moulins du Dev",
+  "license": "ISC",
+  "devDependencies": {
+    "bestzip": "^2.2.1",
+    "copyfiles": "^2.4.1",
+    "ts-loader": "^9.5.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
