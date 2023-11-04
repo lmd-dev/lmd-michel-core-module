@@ -5,13 +5,16 @@ const mode = "production";
 module.exports = [{
     name: "Core Module Builder",
     mode: mode,
-    target: "node",
     entry: path.resolve(__dirname, "src") + "/index.ts",
+    optimization: {
+        minimize: false
+    },
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "index.js",
-        libraryTarget: "umd",
-        libraryExport: 'default'
+        library: {
+            type: "module"
+        }
     },
     module: {
         rules: [
@@ -24,5 +27,8 @@ module.exports = [{
                 exclude: /node_modules/
             }
         ]
+    },
+    experiments: {
+        outputModule: true
     }
 }]
