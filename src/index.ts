@@ -24,6 +24,6 @@ export default class Module implements IModule
 
     async stop(): Promise<void>
     {
-        
+        // What to do when module is stopped
     }
 }
