@@ -5,7 +5,8 @@ declare interface ILogger
 }
 
 declare interface IMessenger {
-    addEventListener(eventName: string, callback: CallableFunction): void;
+    subscribe(eventName: string, callback: CallableFunction): void;
+    unsubscribe(eventName: string): void;
     emit(eventName: string, data: any | null): void;
 }
 
