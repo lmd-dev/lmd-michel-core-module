@@ -1,6 +1,6 @@
 {
   "name": "lmd-michel-module-core",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Base code for LMD Michel module core",
   "main": "index.js",
   "scripts": {
