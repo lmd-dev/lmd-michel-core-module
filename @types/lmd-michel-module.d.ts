@@ -20,6 +20,7 @@ declare interface IWebRouter
 {
     addRoute(url: string, method: string, callback: HttpRouteHandler): void;
     cancelRoute(url: string, method: string): void;
+    broadcast(channel: string, data: any): void;
     getWebserverInformation(): WebserverInformation;
 }
 
