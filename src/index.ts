@@ -21,4 +21,9 @@ export default class Module implements IModule
     {
         // What to do when module is restarted
     }
+
+    async stop(): Promise<void>
+    {
+        
+    }
 }
